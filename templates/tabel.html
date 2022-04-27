@@ -1,0 +1,46 @@
+{% extends "main_layout.html" %}
+{% block title %} List Buku {% endblock %}
+{% block content_title %}
+Daftar Buku
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-10"></div>
+            <div class="col-2">
+                <a href="{{ url_for('tambah') }}"><button class="btn btn-primary">Tambahkan Data</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <table id="example2" class="table table-bordered table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th>No</th>
+                    <th>Judul Buku</th>
+                    <th>Penulis</th>
+                    <th>Deskripsi Buku</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            {% for row in data %}
+            <tbody>
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td class="text-center">
+                        <a href="/edit/{{ row[0] }}" class="btn btn-success">Edit</a> | 
+                        <a href="/hapus/{{ row[0] }}" class="btn btn-danger">Hapus</a>  
+                    </td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
