@@ -1,10 +1,13 @@
 Cara Menggunakan Database dan Environtment
-    1. Import CatalogBook.sql pada phpmyadmin
-    2. aktivasi Environtment dengan "myenv/Scripts/activate" pada terminal
-    3. Install flask dan flask_mysqldb dengan pip install flask flask_mysqldb
-    4. Ubah database pada app.config sesuai database yang digunakan
-    3. Ketikkan perintah python app.py untuk menjalankan
-    4. Cek localhost:5000 pada browser
+    1. Buat database catalogbook
+    2. Import CatalogBook.sql pada phpmyadmin
+    3. Install virtualenv dengan pip install vitualenv
+    4. buat virtualenv dengan virtualenv namaenv
+    5. aktivasi Environtment dengan "nama/Scripts/activate" pada terminal
+    6. Install flask dan flask_mysqldb dengan pip install flask flask_mysqldb
+    7. Ubah database pada app.config sesuai database yang digunakan
+    8. Ketikkan perintah python app.py untuk menjalankan
+    9. Cek localhost:5000 pada browser
 
 Cara Menggunakan Login:
     1. Register terlebih dahulu
